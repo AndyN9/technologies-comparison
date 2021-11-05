@@ -1,0 +1,19 @@
+{
+  "name": "401k-contribution",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "Andy Nguyen (https://github.com/AndyN9)",
+  "license": "ISC",
+  "type": "module",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+  },
+  "devDependencies": {
+    "jest": "^27.3.1"
+  },
+  "jest": {
+    "transform": {}
+  }
+}
