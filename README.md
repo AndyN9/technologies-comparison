@@ -17,9 +17,9 @@ Comparing related topics is one of the most effective ways **for me to learn**. 
 |                     |                                     |
 
 ### JavaScript
-|                 | JavaScript |                            GitHub Stars                            |
-| :-------------- | :--------: | :----------------------------------------------------------------: |
-| **Package Manager** |    npm     |    ![GitHub stars](https://img.shields.io/github/stars/npm/cli)    |
-| **Test Framework**  |    Jest    | ![GitHub stars](https://img.shields.io/github/stars/facebook/jest) |
-|                 |            |                                                                    |
+|                     |                JavaScript                |                            GitHub Stars                            |
+| :------------------ | :--------------------------------------: | :----------------------------------------------------------------: |
+| **Package Manager** |    [npm](https://github.com/npm/cli)     |    ![GitHub stars](https://img.shields.io/github/stars/npm/cli)    |
+| **Test Framework**  | [Jest](https://github.com/facebook/jest) | ![GitHub stars](https://img.shields.io/github/stars/facebook/jest) |
+|                     |                                          |                                                                    |
 
