@@ -19,6 +19,10 @@ Comparing related topics is one of the most effective ways **for me to learn**. 
 
 [^1]: Server runtime version
 ### JavaScript
+>“In JavaScript, there is a beautiful, elegant, highly expressive language that is buried under a steaming pile of good intentions and blunders.”
+>
+> — Douglas Crockford
+
 |                     |                   Tool                   |                            GitHub Stars                            |
 | :------------------ | :--------------------------------------: | :----------------------------------------------------------------: |
 | **Package Manager** |    [npm](https://github.com/npm/cli)     |    ![GitHub stars](https://img.shields.io/github/stars/npm/cli)    |
