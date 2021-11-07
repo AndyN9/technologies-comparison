@@ -19,7 +19,7 @@ Comparing related topics is one of the most effective ways **for me to learn**. 
 
 [^1]: Server runtime version
 ### JavaScript
-|                     |                JavaScript                |                            GitHub Stars                            |
+|                     |                   Tool                   |                            GitHub Stars                            |
 | :------------------ | :--------------------------------------: | :----------------------------------------------------------------: |
 | **Package Manager** |    [npm](https://github.com/npm/cli)     |    ![GitHub stars](https://img.shields.io/github/stars/npm/cli)    |
 | **Test Framework**  | [Jest](https://github.com/facebook/jest) | ![GitHub stars](https://img.shields.io/github/stars/facebook/jest) |
