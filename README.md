@@ -14,8 +14,10 @@ Comparing related topics is one of the most effective ways **for me to learn**. 
 | **Object-oriented** |       prototypal inheritance        |
 | **Known for**       | same language for client and server |
 | **Community size**  |             extra-large             |
+| **Version**         |           Node.js 17[^1]            |
 |                     |                                     |
 
+[^1]: Server runtime version
 ### JavaScript
 |                     |                JavaScript                |                            GitHub Stars                            |
 | :------------------ | :--------------------------------------: | :----------------------------------------------------------------: |
