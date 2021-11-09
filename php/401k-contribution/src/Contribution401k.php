@@ -2,10 +2,12 @@
 
 namespace AndyN9\Contribution401kLibrary;
 
+use Error;
 use TypeError;
 
 class Contribution401k {
   private $annualSalary;
+  private $payrollFrequency;
 
   public function getAnnualSalary() {
 
@@ -19,5 +21,27 @@ class Contribution401k {
     }
 
     $this->annualSalary = $amount;
+  }
+
+  public function getPayrollFrequency() {
+
+    return $this->payrollFrequency;
+  }
+
+  public function setPayrollFrequency($option) {
+    $optionLookup = [
+      'weekly',
+      'bi-weekly',
+      'monthly',
+      'bi-monthly',
+    ];
+
+    $isValidFrequencyOption = in_array($option, $optionLookup);
+    if (!$isValidFrequencyOption) {
+
+      throw new Error('Payroll frequency option needs to be a valid option');
+    }
+
+    $this->payrollFrequency = $option;
   }
 }

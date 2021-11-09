@@ -23,4 +23,23 @@ class Contribution401kTest extends TestCase {
     $this->contribution401k->setAnnualSalary(60000.50);
     $this->assertEquals($this->contribution401k->getAnnualSalary(), 60000.50);
   }
+
+  public function testPayrollFrequencyValidationShouldError() {
+    $this->expectExceptionMessage('Payroll frequency option needs to be a valid option');
+    $this->contribution401k->setPayrollFrequency('foo');
+  }
+
+  public function testPayrollFrequencyValidationShouldSet() {
+    $this->contribution401k->setPayrollFrequency('weekly');
+    $this->assertEquals($this->contribution401k->getPayrollFrequency(), 'weekly');
+
+    $this->contribution401k->setPayrollFrequency('bi-weekly');
+    $this->assertEquals($this->contribution401k->getPayrollFrequency(), 'bi-weekly');
+
+    $this->contribution401k->setPayrollFrequency('monthly');
+    $this->assertEquals($this->contribution401k->getPayrollFrequency(), 'monthly');
+
+    $this->contribution401k->setPayrollFrequency('bi-monthly');
+    $this->assertEquals($this->contribution401k->getPayrollFrequency(), 'bi-monthly');
+  }
 }
