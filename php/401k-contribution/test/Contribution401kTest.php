@@ -42,4 +42,26 @@ class Contribution401kTest extends TestCase {
     $this->contribution401k->setPayrollFrequency('bi-monthly');
     $this->assertEquals($this->contribution401k->getPayrollFrequency(), 'bi-monthly');
   }
+
+  public function testPercentValidationShouldErrorWhenSetToNonNumber() {
+    $this->expectExceptionMessage('Percent value needs to be a number');
+    $this->contribution401k->setPercent(true);
+    $this->contribution401k->setPercent('foo');
+  }
+
+  public function testPercentValidationShouldErrorWhenSetToInvalidRange() {
+    $this->expectExceptionMessage('Percent value needs to be under 100');
+    $this->contribution401k->setPercent(101);
+
+    $this->expectExceptionMessage('Percent value needs to be over 0');
+    $this->contribution401k->setPercent(-1);
+  }
+
+  public function testPercentValidationShouldSet() {
+    $this->contribution401k->setPercent(50);
+    $this->assertEquals($this->contribution401k->getPercent(), 50);
+
+    $this->contribution401k->setPercent(0.5);
+    $this->assertEquals($this->contribution401k->getPercent(), 0.5);
+  }
 }
