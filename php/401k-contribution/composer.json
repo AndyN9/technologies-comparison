@@ -1,0 +1,25 @@
+{
+  "name": "andyn9/401k-contribution",
+  "type": "library",
+  "autoload": {
+    "psr-4": {
+      "AndyN9\\Contribution401kLibrary\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "AndyN9",
+      "email": "13814584+AndyN9@users.noreply.github.com"
+    }
+  ],
+  "license": "ISC",
+  "scripts": {
+    "test": "phpunit test"
+  },
+  "require": {
+    "php": ">=7.4.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.5"
+  }
+}
