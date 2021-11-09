@@ -21,7 +21,7 @@ export default class Contribution401k {
       throw new TypeError('Annual salary amount needs to be a number');
     }
 
-    this.#annualSalary = amount
+    this.#annualSalary = amount;
   }
 
   getPayrollFrequency() {
@@ -64,7 +64,7 @@ export default class Contribution401k {
       throw new Error('Percent value needs to be over 0');
     }
 
-    this.#percent = value
+    this.#percent = value;
   }
 
   #isNumber(value) {
