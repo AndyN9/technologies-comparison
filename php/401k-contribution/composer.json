@@ -14,7 +14,7 @@
   ],
   "license": "ISC",
   "scripts": {
-    "test": "phpunit test"
+    "test": "phpunit test --verbose"
   },
   "require": {
     "php": ">=7.4.0"
