@@ -10,4 +10,8 @@ class PayrollFrequencyFactoryTest extends TestCase {
     $this->payrollFrequencyFactory = new PayrollFrequencyFactory();
   }
 
+  public function testCreatingInvalidPayrollFrequency() {
+    $this->expectExceptionMessage('Not a valid payroll frequency factory option');
+    $invalidPayrollFrequency = $this->payrollFrequencyFactory->create('foo');
+  }
 }
