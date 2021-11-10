@@ -7,15 +7,15 @@ Comparing related topics is one of the most effective ways **for me to learn**. 
 > ― Bjarne Stroustru
 
 ### Comparison Table
-|                     |             JavaScript              |
-| :------------------ | :---------------------------------: |
-| **Syntax**          |  curly brace, semi-colon optional   |
-| **Type**            |            dynamic weak             |
-| **Object-oriented** |       prototypal inheritance        |
-| **Known for**       | same language for client and server |
-| **Community size**  |             extra-large             |
-| **Version**         |           Node.js 17[^1]            |
-|                     |                                     |
+|                    |                      JavaScript                      |
+| :----------------- | :--------------------------------------------------: |
+| **Version**        |                    Node.js 17[^1]                    |
+| **Syntax**         |           curly brace, semi-colon optional           |
+| **Typing**         |                     dynamic weak                     |
+| **Main paradigms** |        procedural, prototypal OOP, functional        |
+| **Known for**      | client and server language, asynchronous programming |
+| **Community size** |                     extra-large                      |
+|                    |                                                      |
 
 [^1]: Server runtime version
 ### JavaScript
