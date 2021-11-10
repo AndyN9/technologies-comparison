@@ -49,10 +49,12 @@ class Contribution401kTest extends TestCase {
     $this->contribution401k->setPercent('foo');
   }
 
-  public function testPercentValidationShouldErrorWhenSetToInvalidRange() {
+  public function testPercentValidationShouldErrorWhenSetToOver100() {
     $this->expectExceptionMessage('Percent value needs to be under 100');
     $this->contribution401k->setPercent(101);
+  }
 
+  public function testPercentValidationShouldErrorWhenSetToUnder0() {
     $this->expectExceptionMessage('Percent value needs to be over 0');
     $this->contribution401k->setPercent(-1);
   }
