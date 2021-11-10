@@ -2,6 +2,7 @@
 
 namespace AndyN9\Contribution401kLibrary;
 
+use AndyN9\Contribution401kLibrary\PayrollFrequency\AbstractPayrollFrequency;
 use AndyN9\Contribution401kLibrary\PayrollFrequency\WeeklyPayrollFrequency;
 use AndyN9\Contribution401kLibrary\PayrollFrequency\BiWeeklyPayrollFrequency;
 use AndyN9\Contribution401kLibrary\PayrollFrequency\MonthlyPayrollFrequency;
@@ -16,12 +17,12 @@ class PayrollFrequencyFactory {
     'bi-monthly',
   ];
 
-  public function getOptionLookup() {
+  public function getOptionLookup(): array {
 
     return $this->optionLookup;
   }
 
-  public function create($option) {
+  public function create(string $option): AbstractPayrollFrequency {
     switch ($option) {
       case 'weekly':
 

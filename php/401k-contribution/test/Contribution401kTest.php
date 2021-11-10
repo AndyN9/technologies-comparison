@@ -10,13 +10,13 @@ class Contribution401kTest extends TestCase {
     $this->contribution401k = new Contribution401k();
   }
 
-  public function testAnnualSalaryValidationShouldError() {
-    $this->expectExceptionMessage('Annual salary amount needs to be a number');
+  public function testAnnualSalaryValidationShouldError(): void {
+    $this->expectException('TypeError');
     $this->contribution401k->setAnnualSalary(true);
     $this->contribution401k->setAnnualSalary('foo');
   }
 
-  public function testAnnualSalaryValidationShouldSet() {
+  public function testAnnualSalaryValidationShouldSet(): void {
     $this->contribution401k->setAnnualSalary(60000);
     $this->assertEquals(60000, $this->contribution401k->getAnnualSalary());
 
@@ -24,12 +24,12 @@ class Contribution401kTest extends TestCase {
     $this->assertEquals(60000.50, $this->contribution401k->getAnnualSalary());
   }
 
-  public function testPayrollFrequencyValidationShouldError() {
+  public function testPayrollFrequencyValidationShouldError(): void {
     $this->expectExceptionMessage('Payroll frequency option needs to be a valid option');
     $this->contribution401k->setPayrollFrequency('foo');
   }
 
-  public function testPayrollFrequencyValidationShouldSet() {
+  public function testPayrollFrequencyValidationShouldSet(): void {
     $this->contribution401k->setPayrollFrequency('weekly');
     $this->assertEquals('weekly', $this->contribution401k->getPayrollFrequency()->getType());
 
@@ -43,23 +43,23 @@ class Contribution401kTest extends TestCase {
     $this->assertEquals('bi-monthly', $this->contribution401k->getPayrollFrequency()->getType());
   }
 
-  public function testPercentValidationShouldErrorWhenSetToNonNumber() {
-    $this->expectExceptionMessage('Percent value needs to be a number');
+  public function testPercentValidationShouldErrorWhenSetToNonNumber(): void {
+    $this->expectException('TypeError');
     $this->contribution401k->setPercent(true);
     $this->contribution401k->setPercent('foo');
   }
 
-  public function testPercentValidationShouldErrorWhenSetToOver100() {
+  public function testPercentValidationShouldErrorWhenSetToOver100(): void {
     $this->expectExceptionMessage('Percent value needs to be under 100');
     $this->contribution401k->setPercent(101);
   }
 
-  public function testPercentValidationShouldErrorWhenSetToUnder0() {
+  public function testPercentValidationShouldErrorWhenSetToUnder0(): void {
     $this->expectExceptionMessage('Percent value needs to be over 0');
     $this->contribution401k->setPercent(-1);
   }
 
-  public function testPercentValidationShouldSet() {
+  public function testPercentValidationShouldSet(): void {
     $this->contribution401k->setPercent(50);
     $this->assertEquals(50, $this->contribution401k->getPercent());
 
