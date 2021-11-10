@@ -61,9 +61,9 @@ class Contribution401kTest extends TestCase {
 
   public function testPercentValidationShouldSet() {
     $this->contribution401k->setPercent(50);
-    $this->assertEquals($this->contribution401k->getPercent(), 50);
+    $this->assertEquals(50, $this->contribution401k->getPercent());
 
     $this->contribution401k->setPercent(0.5);
-    $this->assertEquals($this->contribution401k->getPercent(), 0.5);
+    $this->assertEquals(0.5, $this->contribution401k->getPercent());
   }
 }
