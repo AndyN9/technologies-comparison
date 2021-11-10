@@ -31,16 +31,16 @@ class Contribution401kTest extends TestCase {
 
   public function testPayrollFrequencyValidationShouldSet() {
     $this->contribution401k->setPayrollFrequency('weekly');
-    $this->assertEquals($this->contribution401k->getPayrollFrequency(), 'weekly');
+    $this->assertEquals($this->contribution401k->getPayrollFrequency()->getType(), 'weekly');
 
     $this->contribution401k->setPayrollFrequency('bi-weekly');
-    $this->assertEquals($this->contribution401k->getPayrollFrequency(), 'bi-weekly');
+    $this->assertEquals($this->contribution401k->getPayrollFrequency()->getType(), 'bi-weekly');
 
     $this->contribution401k->setPayrollFrequency('monthly');
-    $this->assertEquals($this->contribution401k->getPayrollFrequency(), 'monthly');
+    $this->assertEquals($this->contribution401k->getPayrollFrequency()->getType(), 'monthly');
 
     $this->contribution401k->setPayrollFrequency('bi-monthly');
-    $this->assertEquals($this->contribution401k->getPayrollFrequency(), 'bi-monthly');
+    $this->assertEquals($this->contribution401k->getPayrollFrequency()->getType(), 'bi-monthly');
   }
 
   public function testPercentValidationShouldErrorWhenSetToNonNumber() {

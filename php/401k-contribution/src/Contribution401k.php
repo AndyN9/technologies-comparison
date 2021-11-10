@@ -2,6 +2,7 @@
 
 namespace AndyN9\Contribution401kLibrary;
 
+use AndyN9\Contribution401kLibrary\PayrollFrequencyFactory;
 use Error;
 use TypeError;
 
@@ -30,20 +31,15 @@ class Contribution401k {
   }
 
   public function setPayrollFrequency($option) {
-    $optionLookup = [
-      'weekly',
-      'bi-weekly',
-      'monthly',
-      'bi-monthly',
-    ];
+    $payrollFrequencyFactory = new PayrollFrequencyFactory();
+    $isValidFrequencyOption = in_array($option, $payrollFrequencyFactory->getOptionLookup());
 
-    $isValidFrequencyOption = in_array($option, $optionLookup);
     if (!$isValidFrequencyOption) {
 
       throw new Error('Payroll frequency option needs to be a valid option');
     }
 
-    $this->payrollFrequency = $option;
+    $this->payrollFrequency = $payrollFrequencyFactory->create($option);
   }
 
   public function getPercent() {

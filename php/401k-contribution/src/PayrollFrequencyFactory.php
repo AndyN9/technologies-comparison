@@ -9,6 +9,18 @@ use AndyN9\Contribution401kLibrary\PayrollFrequency\BiMonthlyPayrollFrequency;
 use Error;
 
 class PayrollFrequencyFactory {
+  private $optionLookup = [
+    'weekly',
+    'bi-weekly',
+    'monthly',
+    'bi-monthly',
+  ];
+
+  public function getOptionLookup() {
+
+    return $this->optionLookup;
+  }
+
   public function create($option) {
     switch ($option) {
       case 'weekly':
