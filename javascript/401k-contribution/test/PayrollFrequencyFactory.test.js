@@ -7,7 +7,7 @@ describe('payroll frequency factory', () => {
   it('should error when creating an in-valid factory option', () => {
     const invalidPayrollFrequencyError = new Error('Not a valid payroll frequency factory option');
     expect(()=>{
-      const invalidPayrollFrequency = payrollFrequencyFactory.create('invalid');
+      const invalidPayrollFrequency = payrollFrequencyFactory.create('foo');
     }).toThrow(invalidPayrollFrequencyError);
 
     expect(()=>{
