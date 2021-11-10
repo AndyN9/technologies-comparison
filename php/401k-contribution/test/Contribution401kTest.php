@@ -26,6 +26,7 @@ class Contribution401kTest extends TestCase {
 
   public function testPayrollFrequencyValidationShouldError(): void {
     $payrollFrequencyOptionErrorMessage = 'Payroll frequency option needs to be a valid option';
+
     $this->expectExceptionMessage($payrollFrequencyOptionErrorMessage);
     $this->contribution401k->setPayrollFrequency('foo');
   }
@@ -52,12 +53,14 @@ class Contribution401kTest extends TestCase {
 
   public function testPercentValidationShouldErrorWhenSetToOver100(): void {
     $percentMaxRangeError = 'Percent value needs to be under 100';
+
     $this->expectExceptionMessage($percentMaxRangeError);
     $this->contribution401k->setPercent(101);
   }
 
   public function testPercentValidationShouldErrorWhenSetToUnder0(): void {
     $percentMinRangeError = 'Percent value needs to be over 0';
+
     $this->expectExceptionMessage($percentMinRangeError);
     $this->contribution401k->setPercent(-1);
   }
