@@ -5,7 +5,6 @@ namespace AndyN9\Contribution401kLibrary;
 use AndyN9\Contribution401kLibrary\PayrollFrequencyFactory;
 use AndyN9\Contribution401kLibrary\PayrollFrequency\AbstractPayrollFrequency;
 use Error;
-use TypeError;
 
 class Contribution401k {
   private $annualSalary;
