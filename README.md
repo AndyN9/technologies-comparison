@@ -32,6 +32,10 @@ Comparing related topics is one of the most effective ways **for me to learn**. 
 JavaScript has the distinct advantage of being both a client and a server technology, making it an excellent language for a web developer to learn and use to quickly create web applications. Another advantage of JavaScript is the large community which supports JavaScript development, from tutorials to various packages. However, I believe a major disadvantage of modern JavaScript development is 'JavaScript fatigue'; the explosion of JavaScript popularity provides developers with a vast array of frameworks and libraries to choose from, which frequently leads to analysis paralysis. 'JavaScript fatigue' can be alleviated by mastering the JavaScript language and identifying design patterns and concepts to quickly transition between frameworks and libraries. Overall, I believe JavaScript and its vast ecosystem (ES6, React, Node.js, and so on) are indispensable tools in the web developer's toolbox.
 
 ### PHP
+>"PHP is about as exciting as your toothbrush. You use it every day, it does the job, it is a simple tool, so what? Who would want to read about toothbrushes?"
+>
+> — Rasmus Lerdorf
+
 |                     |                          Tool                           |                                  GitHub Stars                                  |
 | :------------------ | :-----------------------------------------------------: | :----------------------------------------------------------------------------: |
 | **Package Manager** |    [Composer](https://github.com/composer/composer)     |     ![GitHub stars](https://img.shields.io/github/stars/composer/composer)     |
