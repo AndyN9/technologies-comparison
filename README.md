@@ -7,7 +7,7 @@ Comparing related topics is one of the most effective ways **for me to learn**. 
 - [JavaScript Version](javascript/401k-contribution)
 - [PHP Version](php/401k-contribution)
 
-A library to calculate 401k contribution amount per paycheck using annual salary, payroll frequency, and optional contribution percent.
+A library to calculate 401k contribution amount per paycheck.
 
 ## Programming Languages
 > “There are only two kinds of languages: the ones people complain about and the ones nobody uses.”
