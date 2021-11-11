@@ -72,4 +72,98 @@ class Contribution401kTest extends TestCase {
     $this->contribution401k->setPercent(0.5);
     $this->assertEquals(0.5, $this->contribution401k->getPercent());
   }
+
+  public function testCalculateShouldErrorWhenCalledWithoutAnnualSalary(): void {
+    $annualSalaryRequiredError = 'An annual salary amount is required';
+
+    $this->expectExceptionMessage($annualSalaryRequiredError);
+    $this->contribution401k->calculate();
+  }
+
+  public function testCalculateShouldErrorWhenCalledWithoutPayrollFrquency(): void {
+    $payrollFrequencyRequiredError = 'A payroll frequency is required';
+
+    $this->expectExceptionMessage($payrollFrequencyRequiredError);
+    $this->contribution401k->setAnnualSalary(60000);
+    $this->contribution401k->calculate();
+  }
+
+  public function testCalculateMaxContribution(): void {
+    $this->contribution401k->setAnnualSalary(60000);
+    $this->contribution401k->setPayrollFrequency('weekly');
+    $this->assertEquals(
+      [
+        'amount' => '375.00',
+        'percent' => '32.50',
+      ],
+      $this->contribution401k->calculate()
+    );
+
+    $this->contribution401k->setPayrollFrequency('bi-weekly');
+    $this->assertEquals(
+      [
+        'amount' => '750.00',
+        'percent' => '32.50',
+      ],
+      $this->contribution401k->calculate()
+    );
+
+    $this->contribution401k->setPayrollFrequency('monthly');
+    $this->assertEquals(
+      [
+        'amount' => '1625.00',
+        'percent' => '32.50',
+      ],
+      $this->contribution401k->calculate()
+    );
+
+    $this->contribution401k->setPayrollFrequency('bi-monthly');
+    $this->assertEquals(
+      [
+        'amount' => '3250.00',
+        'percent' => '32.50',
+      ],
+      $this->contribution401k->calculate()
+    );
+  }
+
+  public function testCalculatePercentContribution(): void {
+    $this->contribution401k->setAnnualSalary(60000);
+    $this->contribution401k->setPercent(5);
+    $this->contribution401k->setPayrollFrequency('weekly');
+    $this->assertEquals(
+      [
+        'amount' => '57.69',
+        'percent' => '5.00',
+      ],
+      $this->contribution401k->calculate()
+    );
+
+    $this->contribution401k->setPayrollFrequency('bi-weekly');
+    $this->assertEquals(
+      [
+        'amount' => '115.38',
+        'percent' => '5.00',
+      ],
+      $this->contribution401k->calculate()
+    );
+
+    $this->contribution401k->setPayrollFrequency('monthly');
+    $this->assertEquals(
+      [
+        'amount' => '250.00',
+        'percent' => '5.00',
+      ],
+      $this->contribution401k->calculate()
+    );
+
+    $this->contribution401k->setPayrollFrequency('bi-monthly');
+    $this->assertEquals(
+      [
+        'amount' => '500.00',
+        'percent' => '5.00',
+      ],
+      $this->contribution401k->calculate()
+    );
+  }
 }
