@@ -7,6 +7,9 @@ use AndyN9\Contribution401kLibrary\PayrollFrequency\AbstractPayrollFrequency;
 use Error;
 
 class Contribution401k {
+  // TODO if max contribution limit ever increases,
+  //   create yearly concrete class, extends this,
+  //   and override MAX_CONTRIBUTION_LIMIT constant
   const MAX_AMOUNT_LIMIT = 19500;
 
   private $annualSalary;
