@@ -1,3 +1,6 @@
 # package managers
 node_modules
 vendor
+
+# hidden files
+.vscode
