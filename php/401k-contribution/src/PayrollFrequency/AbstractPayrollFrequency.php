@@ -9,21 +9,21 @@ abstract class AbstractPayrollFrequency {
   public function __construct() {
   }
 
-  public function getType() {
+  public function getType(): string {
 
     return $this->type;
   }
 
-  public function setType($value) {
+  public function setType(string $value) {
     $this->type = $value;
   }
 
-  public function getPayPeriods() {
+  public function getPayPeriods(): int {
 
     return $this->payPeriods;
   }
 
-  public function setPayPeriods($value) {
+  public function setPayPeriods(int $value) {
     $this->payPeriods = $value;
   }
 }
