@@ -21,7 +21,7 @@ A library to calculate 401k contribution amount per paycheck.
 | **Syntax**          |           curly brace, semi-colon optional           |               curly brace, '$' variables                |
 | **Typing**          |                     dynamic weak                     |               dynamic weak, type hinting                |
 | **Main paradigms**  |        procedural, prototypal OOP, functional        |                  procedural, class OOP                  |
-| **Known for**       | client and server language, asynchronous programming |          predates JavaScript, CMS, e-commerce           |
+| **Known for**       | client and server language, asynchronous programming |              mature open-source frameworks              |
 | **Community size**  |                     extra-large                      |                          large                          |
 | **Package Manager** |          [npm](https://github.com/npm/cli)           |    [Composer](https://github.com/composer/composer)     |
 | **Test Framework**  |       [Jest](https://github.com/facebook/jest)       | [PHPUnit](https://github.com/sebastianbergmann/phpunit) |
