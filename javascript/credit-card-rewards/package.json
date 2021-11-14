@@ -1,0 +1,15 @@
+{
+  "name": "credit-card-rewards",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "Andy Nguyen (https://github.com/AndyN9)",
+  "license": "ISC",
+  "type": "module",
+  "scripts": {
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
