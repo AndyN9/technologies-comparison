@@ -12,6 +12,8 @@ Comparing related topics is one of the most effective ways **for me to learn**. 
 
 A library to calculate the 401k contribution amount per paycheck. The main objectives of building this library were to get familiar with the language's package manager, OOP paradigm, and testing framework.
 
+### Credit Card Rewards REST API
+
 ## Programming Languages
 > “There are only two kinds of languages: the ones people complain about and the ones nobody uses.”
 >
