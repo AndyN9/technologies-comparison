@@ -2,6 +2,9 @@
 Comparing related topics is one of the most effective ways **for me to learn**. This repository houses **my notes** as well as application examples of various web technologies, with a focus on micro web frameworks and JavaScript-based user interfaces.
 
 ## Application Examples
+>“Programming is a skill best acquired by practice and example rather than from books.”
+>
+> ― Alan Turing
 
 ### 401k Contribution Library
 - [JavaScript Version](javascript/401k-contribution)
