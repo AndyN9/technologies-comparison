@@ -17,7 +17,7 @@ A library to calculate the 401k contribution amount per paycheck. The main objec
 ### Comparison Table
 |                     |                      JavaScript                      |                           PHP                           |
 | :------------------ | :--------------------------------------------------: | :-----------------------------------------------------: |
-| **Version**         |                    Node.js 17[^1]                    |                          PHP 8                          |
+| **Version**         |              ECMAScript 6 / Node.js 17               |                          PHP 8                          |
 | **Syntax**          |           curly brace, semi-colon optional           |               curly brace, '$' variables                |
 | **Typing**          |                     dynamic weak                     |               dynamic weak, type hinting                |
 | **Main paradigms**  |        procedural, prototypal OOP, functional        |                  procedural, class OOP                  |
@@ -26,5 +26,3 @@ A library to calculate the 401k contribution amount per paycheck. The main objec
 | **Package Manager** |          [npm](https://github.com/npm/cli)           |    [Composer](https://github.com/composer/composer)     |
 | **Test Framework**  |       [Jest](https://github.com/facebook/jest)       | [PHPUnit](https://github.com/sebastianbergmann/phpunit) |
 |                     |                                                      |                                                         |
-
-[^1]: Server runtime version
