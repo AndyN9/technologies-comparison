@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "keywords": [],
-  "author": "Andy Nguyen (https://github.com/AndyN9)",
+  "author": "Andy Nguyen <13814584+AndyN9@users.noreply.github.com>",
   "license": "ISC",
   "type": "module",
   "scripts": {
