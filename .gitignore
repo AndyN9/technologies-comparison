@@ -4,3 +4,6 @@ vendor
 
 # hidden files
 .vscode
+
+# data
+data

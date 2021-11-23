@@ -8,10 +8,12 @@
   "license": "ISC",
   "type": "module",
   "scripts": {
+    "delete-and-seed-db": "rm data/credit-card-rewards.db && node seed.js",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --watch --verbose"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "sqlite3": "^5.0.2"
   },
   "devDependencies": {
     "jest": "^27.3.1",
