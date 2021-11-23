@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS "credit_card" (
+  "id"	INTEGER NOT NULL UNIQUE,
+  "issuer"	TEXT NOT NULL,
+  "name"	TEXT NOT NULL,
+  "network"	TEXT NOT NULL,
+  PRIMARY KEY("id" AUTOINCREMENT)
+);
