@@ -7,7 +7,7 @@ export default class SqliteDatabase extends Database {
   constructor() {
     if (!doesDatabaseSourceExists) {
 
-      throw new Error('insert method not implemented');
+      throw new Error('database does\'t exists');
     }
 
     this.#database = database;
